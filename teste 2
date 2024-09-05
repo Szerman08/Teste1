@@ -1,0 +1,48 @@
+nome = input("Qual seu nome ? ")
+
+print("\nOlá, " + nome + " escolha 2 numeros: \n")
+
+while True:
+    n1 = input("Numero 1 :")
+    n2 = input("Numero 2 :")
+
+    n1 = float(n1)
+    n2 = float(n2)
+
+    print("\nEscolha a operação:")
+    print("1. Soma")
+    print("2. Subtração")
+    print("3. Multiplicação")
+    print("4. Exponenciação")
+    print("5. Divisão")
+
+    operacao = input("\nDigite o número da operação desejada: ")
+
+    if operacao == '1':
+        resultado = n1 + n2
+        print("\nO resultado da soma é:", resultado)
+    elif operacao == '2':
+        resultado = n1 - n2
+        print("\nO resultado da subtração é:", resultado)
+    elif operacao == '3':
+        resultado = n1 * n2
+        print("\nO resultado da multiplicação é:", resultado)
+    elif operacao == '4':
+        resultado = n1 ** n2
+        print("\nO resultado da exponenciação é:", resultado)
+    elif operacao == '5':
+        if n2 != 0:
+            resultado = n1 / n2
+            print("\nO resultado da divisão é:", resultado)
+        else:
+            print("\nErro: Divisão por zero não é permitida.")
+    else:
+        print("\nOperação inválida. Por favor, escolha uma operação válida.")
+    
+    sair = input("\nDeseja sair? Digite 'sim' para sair ou qualquer outra tecla para continuar: ")
+    if sair.lower() == 'sim':
+        print("\nSaindo do programa. Até mais, " + nome + "!")
+        break
+    else:
+        print("\nEscolha mais dois números:")
+
